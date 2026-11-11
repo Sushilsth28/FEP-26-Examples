@@ -7,7 +7,8 @@
     <h1>Calculate Battery Level!</h1>
     <p1>Enter your name and your battery level (1-5) to calculate your charge level!</p1>
     <input type="text" id="name" placeholder="What is your name?">
-    <input type="number" id="charge-level" placeholder="Select level?" min="1" max="5">
+    <input type="range" id="charge-level" placeholder="Select level?" min="1" max="5">
+   
     <p id="name-output">...</p>
     <button type="button" onclick="calculateChargeLevel()">Calculate battery level</button>
 
