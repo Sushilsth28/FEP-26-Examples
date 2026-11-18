@@ -31,7 +31,7 @@
                 seconds--;
                 updateOutput(seconds);
 
-                if (seconds <= 0) {
+                if (seconds <= 0) { // <= makes it work also with decimals
                     updateOutput("Time's up");
                     clearInterval(timer);
                     timer = null;
