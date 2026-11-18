@@ -15,8 +15,13 @@
         const stopBtn = document.getElementById('btn-stop');
         const timerOutput = document.getElementById('timer-output');
 
+
         timer = setInterval(() => {
             timerOutput.textContent = seconds;
+            if (seconds > 2) {
+                timerOutput.textContent = "time's up"
+                clearInterval(timer);
+            }
             seconds++;
         }, 1000); 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Timer</title>
+</head>
+<body>
+    <div id="output" style="font-size: 20px;">...</div>
+    <input type="number" id="time" placeholder="Seconds">
+    <button id="btn-timer">Start</button>
+    
+    <script>
+        let seconds;
+        let timer = null;
+
+        function updateOutput(content) {
+            document.getElementById('output').textContent = content;
+        }
+
+        function startTimer() {
+
+            if (timer !== null) return; // don't start a new timer if the old one is still running
+
+            seconds = Number(document.getElementById('time').value);
+
+            updateOutput(seconds);
+
+            timer = setInterval(() => {
+
+                seconds--;
+                updateOutput(seconds);
+
+                if (seconds <= 0) {
+                    updateOutput("Time's up");
+                    clearInterval(timer);
+                    timer = null;
+                }                
+                
+            }, 1000);
+        }
+
+        document.getElementById('btn-timer').addEventListener('click', startTimer);
+    </script>
+</body>
+</html>
