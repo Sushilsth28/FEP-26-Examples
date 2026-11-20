@@ -1,8 +1,22 @@
+const MONTHS = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
 
 const d = new Date();
 
 document.getElementById('date-output').textContent = `
-    Today is ${d.getDate()}.${d.getMonth()+1}.${d.getFullYear()}
+    ${MONTHS[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}
 `;
 
 const presentationDay = new Date(2026, 11, 16, 9, 15);
@@ -24,6 +38,21 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
+/**
+ * Form
+ */
+document.querySelectorAll('input, select, textarea').forEach(inp => {
+    inp.addEventListener('input', () => {
+
+        let output = inp.value;
+
+        if (inp.getAttribute('type') === 'checkbox' && !inp.checked) {
+            output = '';
+        }
+
+        document.getElementById('form-output').innerHTML = `${output}<br>`
+    });
+});
 
 
 
