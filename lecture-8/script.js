@@ -62,3 +62,9 @@ getInfoText();
 document.getElementById('new-joke').addEventListener('click', getJoke);
 
 
+/*
+async function getRecipe(recipe) {
+    const resp = await fetch(`./recipes/${recipe}.txt");
+} */
+
+
