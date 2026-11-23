@@ -49,4 +49,16 @@ async function getJoke() {
     console.log(jokeText);
     document.getElementById('joke').textContent = jokeText;
 }
+
+async function getInfoText() {
+    const resp = await fetch("info.txt");
+    document.getElementById('info').innerHTML = await resp.text();
+
+}
+
 getJoke();
+getInfoText();
+
+document.getElementById('new-joke').addEventListener('click', getJoke);
+
+
