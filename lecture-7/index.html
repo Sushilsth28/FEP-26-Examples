@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div>
+        <span id="date-output"></span>
+        <span id="clock"></span>
+    </div>
+    <form method="post">
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="pass" placeholder="Password"><br>
+        <input type="date"><input type="time"><br>
+        <input type="datetime-local"><br>
+        <input type="range" min="0" max="100"><br>
+        <select>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option>Three</option>
+        </select><br>
+        <label for="chk">Check me: </label> 
+        <input type="checkbox" id="chk" value="hello"><br>
+        Choose:<br>
+        <input type="radio" name="food" value="fish"> Fish<br>
+        <input type="radio" name="food" value="meat"> Meat<br>
+        <input type="radio" name="food" value="veggie"> Vegetables<br>
+
+        Additional info:<br>
+        <textarea placeholder="text">default text</textarea>
+
+
+
+        <!--<button type="button">OK</button>
+        <button type="submit">Submit form</button>-->
+    </form>
+
+    <div id="form-output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

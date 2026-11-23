@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Big arrow: the tip (top-left) is the click point -->
+  <path d="M3 3 L3 52 L16 40 L25 60 L35 55 L26 36 L44 36 Z"
+        fill="#8a4fff" stroke="#222" stroke-width="3" stroke-linejoin="round"/>
+  <!-- shine -->
+  <path d="M8 13 L8 30 L18 22 Z" fill="#fff" opacity="0.5"/>
+  <!-- traffic-light dots -->
+  <circle cx="50" cy="12" r="5" fill="#ff3b30" stroke="#222" stroke-width="1.5"/>
+  <circle cx="50" cy="24" r="5" fill="#ffcc00" stroke="#222" stroke-width="1.5"/>
+  <circle cx="50" cy="36" r="5" fill="#34c759" stroke="#222" stroke-width="1.5"/>
+</svg>
